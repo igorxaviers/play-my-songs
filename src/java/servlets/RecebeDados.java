@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlets;
 
 import java.io.File;
@@ -32,16 +27,15 @@ public class RecebeDados extends HttpServlet {
         String mensagem = "dados e foto recebidos com sucesso";
         try
         {
-            String estilo=request.getParameter("estilo");
-            String nome=request.getParameter("nome");
-            String cantor=request.getParameter("cantor");
-            Part foto = request.getPart("foto");
+            String estilo = request.getParameter("estilo");
+            String nome = request.getParameter("nome");
+            String cantor = request.getParameter("cantor");
+            Part musica = request.getPart("musica");
 
-            byte[] imagem=new byte[(int)foto.getSize()];
-
-            foto.getInputStream().read(imagem);
+            byte[] imagem = new byte[(int)musica.getSize()];
+            musica.getInputStream().read(imagem);
             // cria um arquivo com o mesmo nome da foto e grava o vetor como seu conteúdo
-            FileOutputStream arquivo = new FileOutputStream(new File(getServletContext().getRealPath("/musicas") + "/" + foto.getSubmittedFileName()));
+            FileOutputStream arquivo = new FileOutputStream(new File(getServletContext().getRealPath("/musicas") + "/" + nome +"_"+estilo+"_"+cantor+".mp3"));
             arquivo.write(imagem);
             arquivo.close();
         }catch(Exception e){mensagem="Erro ao armazenar os dados";}

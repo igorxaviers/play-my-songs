@@ -1,0 +1,78 @@
+:root{
+    --main-color: #19b377;
+    --secondary-color: #3bbe8a;
+    --third-color: #8dd9bb;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body{
+    background-color: var(--secondary-color) !important;
+    height: 100vh;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.msg{
+    color: #dc3545;
+    font-size: 0.9em;
+}
+label{
+    font-size: 14px;
+}
+::placeholder, select{
+    font-size: 13px;
+}
+h1{
+    font-weight: 800;
+    color: #fff;
+}
+.btn{
+    background-color: var(--main-color) !important;
+    border: var(--third-color) !important;
+}
+.img-bg{
+    position: absolute;
+    right: 4em;
+    bottom: 0;
+    width: 450px;
+    z-index: -1;
+}
+.link{
+    overflow: hidden;
+    transition: 300ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.link:hover{
+    transform: scale(1.03);
+    box-shadow: rgba(17, 12, 46, 0.08) 0px 28px 30px 0px;
+}
+a{
+    text-decoration: none;
+}
+.lista-resultado{
+    max-height: 550px;
+    overflow-y: scroll;
+}
+
+.item-musica{
+    background-color: var(--secondary-color);
+}
+.item-musica audio{
+    width: 100%;
+}
+.item-musica p{
+    color: #fff;
+    font-weight: 700;
+}
