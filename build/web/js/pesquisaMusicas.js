@@ -4,6 +4,7 @@ const resTexto = document.querySelector('.res-text');
 img.style.display = 'none';
 resTexto.style.display='none';
 
+//Pesquisa de músicas
 function pesquisaMusica(){
     event.preventDefault();
     
@@ -22,18 +23,20 @@ function pesquisaMusica(){
           if (retorno.startsWith('Erro'))
                resultadoPesquisa.innerHTML = 'Erro ao pesquisar 🥶';
           else
-               if(retorno.length<=0)
+               if(retorno.length==0)
                {
                     resTexto.style.display='block';
                     resTexto.innerHTML = 'Nenhuma música encontrada 😶';
                     img.style.display = 'block';
                     img.src = 'not-found.svg';
-                    listaResultado.innerHTML = '';
+                    listaResultado.style.display = 'none';
                }
           else
           {
+               listaResultado.style.display = 'block';
                img.style.display = 'none';
                console.log(retorno);
+               //Contagem de músicas
                resTexto.innerHTML = `${(retorno.match(/item-musica/g) || []).length} Musicas encontradas 😁:`;
                resTexto.style.display='block';
                listaResultado.innerHTML = retorno;

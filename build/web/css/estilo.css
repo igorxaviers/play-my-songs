@@ -18,6 +18,7 @@
 }
 
 body{
+    position: relative;
     background-color: var(--secondary-color) !important;
     height: 100vh;
 }
@@ -62,8 +63,9 @@ a{
     text-decoration: none;
 }
 .lista-resultado{
-    max-height: 550px;
     overflow-y: scroll;
+    max-height: 600px;
+    background-color: #f1f1f1;
 }
 
 .item-musica{
@@ -75,4 +77,24 @@ a{
 .item-musica p{
     color: #fff;
     font-weight: 700;
+}
+.btn-back{
+    position: absolute;
+    left: 8em;
+    top: 6em;
+}
+.play{
+    position: absolute;
+    width: 16em;
+    left: -2em;
+    bottom: 0em;
+}
+.circle-animation{
+    animation: animationp 4s infinite;
+    transform-origin: center;
+}
+@keyframes animationp{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
 }

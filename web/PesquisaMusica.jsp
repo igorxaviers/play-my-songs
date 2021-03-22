@@ -18,10 +18,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <a href="./">
+            <svg class="btn-back" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="23" cy="23" r="23" fill="white" fill-opacity="0.22"/>
+                <path d="M14.9393 21.9393C14.3536 22.5251 14.3536 23.4749 14.9393 24.0607L24.4853 33.6066C25.0711 34.1924 26.0208 34.1924 26.6066 33.6066C27.1924 33.0208 27.1924 32.0711 26.6066 31.4853L18.1213 23L26.6066 14.5147C27.1924 13.9289 27.1924 12.9792 26.6066 12.3934C26.0208 11.8076 25.0711 11.8076 24.4853 12.3934L14.9393 21.9393ZM18 21.5H16V24.5H18V21.5Z" fill="white"/>
+            </svg>  
+        </a>
         <div class="container pt-2">
-            <div class="col-7 mx-auto">
+            <div class="col-md-7 col-12 mx-auto">
                 <h1 class="my-4">Pesquisar músicas</h1>
-                <div class="rounded-3 bg-white p-4">
+                <div class="rounded-3 bg-white p-md-4 p-3">
                     <form onsubmit="pesquisaMusica()" id="pesquisa" method="POST" name="pesquisa" class="">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome da música: </label>
@@ -42,7 +48,7 @@
                     <div id="resultado">
                         <h3 class="mt-5 mb-4 fw-bold text-center res-text">Resultados encontrados:</h3>
                         <img id="img" src="" alt="Ilustração não encontrado" width="150" class="mx-auto">
-                        <div class="lista-resultado py-3 px-4">
+                        <div class="lista-resultado rounded-3 py-3 px-4">
                             
                         </div>
                     </div>
